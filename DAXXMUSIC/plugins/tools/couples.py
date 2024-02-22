@@ -4,12 +4,22 @@ from datetime import datetime
 from telegraph import upload_file
 from PIL import Image , ImageDraw
 from pyrogram import *
-from pyrogram.types import *
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import *
 
 #BOT FILE NAME
 from DAXXMUSIC import app as app
 from DAXXMUSIC.mongo.couples_db import _get_image, get_couple
+
+POLICE = [
+    [
+        InlineKeyboardButton(
+            text="˹ᴋᴏᴋᴜ sᴜᴘᴘᴏʀᴛ˼",
+            url=f"https://t.me/Koku_Support_Group",
+        ),
+    ],
+]
+
 
 def dt():
     now = datetime.now()
@@ -103,7 +113,8 @@ async def ctest(_, message):
 ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
 """
     
-         await message.reply_photo(f"test_{cid}.png", caption=TXT)
+         await message.reply_photo(f"test_{cid}.png", caption=TXT, reply_markup=InlineKeyboardMarkup(POLICE),
+    )
          await msg.delete()
          a = upload_file(f"test_{cid}.png")
          for x in a:
@@ -144,6 +155,11 @@ __help__ = """
 **» /couples** - Get Todays Couples Of The Group In Interactive View
 """
 
+
+
+
+
+    
 
 
 
