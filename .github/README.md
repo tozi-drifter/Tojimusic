@@ -17,8 +17,7 @@
 
 </h2>
 
-**※ ᴛᴇxᴛ ʙᴏᴛ ➛ [‌⚘ ɴ ʏ ᴋ ᴀ ᴀ ☂ ᴍ ᴜ s ɪ ᴄ ₰](https://t.me/Nykaaxbot)**
-
+**※ ᴛᴇxᴛ ʙᴏᴛ ➛ [‌𝐊𝐎𝐊𝐔 【こく】](https://t.me/kokuproXbot)**
 
  <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=🧋+𝗛𝗔𝗣𝗣𝗬+𝗡𝗘𝗪+𝗬𝗘𝗔𝗥+❷⓿❷❹+🧋">
 
