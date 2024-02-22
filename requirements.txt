@@ -16,6 +16,7 @@ Faker
 pydub
 pycountry
 heroku3
+pytube
 apscheduler
 motor 
 numpy
