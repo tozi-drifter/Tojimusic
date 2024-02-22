@@ -1,7 +1,7 @@
 import os
 import requests
 from random import randint
-from VIPMUSIC.utils.database import (
+from DAXXMUSIC.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -14,24 +14,24 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton, CallbackQuery,
                             InlineKeyboardMarkup, Message)
-from VIPMUSIC.utils import close_markup
+from DAXXMUSIC.utils import close_markup
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
-from VIPMUSIC import Carbon, app
-from VIPMUSIC.utils.decorators.language import language, languageCB
-from VIPMUSIC.utils.inline.playlist import (botplaylist_markup,
+from DAXXMUSIC import Carbon, app
+from DAXXMUSIC.utils.decorators.language import language, languageCB
+from DAXXMUSIC.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from VIPMUSIC.utils.pastebin import VIPBin
+from DAXXMUSIC.utils.pastebin import DAXXBin
 import time
 import yt_dlp
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
 from youtubesearchpython import SearchVideos
 
-from VIPMUSIC.utils.stream.stream import stream
+from DAXXMUSIC.utils.stream.stream import stream
 from typing import Dict, List, Union
 
-from VIPMUSIC.core.mongo import mongodb
+from DAXXMUSIC.core.mongo import mongodb
 
 
 playlistdb = mongodb.playlist
@@ -115,7 +115,7 @@ async def check_playlist(client, message: Message, _):
         count += 1
         msg += f"\n\n{count}- {title[:70]}\n"
         msg += _["playlist_5"].format(duration)
-    link = await VIPBin(msg)
+    link = await DAXXBin(msg)
     lines = msg.count("\n")
     if lines >= 17:
         car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -283,7 +283,7 @@ async def add_playlist(client, message: Message, _):
         await adding.delete()
         return await message.reply_text(text="**➻ ᴀʟʟ sᴏɴɢs ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ғʀᴏᴍ ʏᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ✅**\n\n**➥ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴀɴʏ sᴏɴɢ ᴛʜᴇɴ ᴄʟɪᴄᴋ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.\n\n**▷ ᴄʜᴇᴄᴋ ʙʏ » /playlist**\n\n▷ **ᴘʟᴀʏ ʙʏ » /play**", reply_markup=keyboardes)
     else:
-        from VIPMUSIC import YouTube
+        from DAXXMUSIC import YouTube
         # Add a specific song by name
         query = " ".join(message.command[1:])
         print(query)
