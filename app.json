@@ -38,9 +38,39 @@
         "required": true
       },
       "STRING_SESSION": {
-        "description": "A Pyrogram v2 String Session from @STRINGSEASO_NBOT on Telegram.",
-        "value": "",
-        "required": true
+            "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
+            "value": "",
+            "required": false
+      },
+        "STRING_SESSION1": {
+            "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
+            "value": "",
+            "required": false
+      },
+        "STRING_SESSION2": {
+            "description": "Abe Bosadike yha kuchh na daal madrchod",
+            "value": "",
+            "required": false
+      },
+        "STRING_SESSION4": {
+            "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
+            "value": "",
+            "required": false
+      },
+        "STRING_SESSION5": {
+            "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
+            "value": "",
+            "required": false
+      },
+        "STRING_SESSION6": {
+            "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
+            "value": "",
+            "required": false
+      },
+        "STRING_SESSION7": {
+            "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
+            "value": "",
+            "required": false
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
