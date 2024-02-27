@@ -52,22 +52,22 @@
             "value": "",
             "required": false
       },
-        "STRING_SESSION4": {
+      "STRING_SESSION4": {
             "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
             "value": "",
             "required": false
       },
-        "STRING_SESSION5": {
+      "STRING_SESSION5": {
             "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
             "value": "",
             "required": false
       },
-        "STRING_SESSION6": {
+      "STRING_SESSION6": {
             "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
             "value": "",
             "required": false
       },
-        "STRING_SESSION7": {
+      "STRING_SESSION7": {
             "description": "A Pyrogram v2 String Session from @StringXTRobot on Telegram.",
             "value": "",
             "required": false
