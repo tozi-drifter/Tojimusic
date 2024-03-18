@@ -68,7 +68,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
         ),
         )
 close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
-    else:
+    
         user = await app.get_users(OWNER_ID)
 
         user_mention = (user.first_name if not user.mention else user.mention)
