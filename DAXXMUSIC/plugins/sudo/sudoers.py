@@ -68,17 +68,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
         ),
         )
 close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
-    
-        user = await app.get_users(OWNER_ID)
-
-        user_mention = (user.first_name if not user.mention else user.mention)
-        caption = f"˹ʟɪsᴛ ᴏғ ʙᴏᴛ ᴍᴏᴅᴇʀᴀᴛᴏʀs˼\n\n🗿Oᴡɴᴇʀ ➥ {user_mention}\n\n"
-
-        keyboard.append([InlineKeyboardButton("๏ ᴠɪᴇᴡ ᴏᴡɴᴇʀ ๏", url=f"tg://openmessage?user_id={OWNER_ID}")])
-        
-        count = 1
-        for user_id in SUDOERS:
-            if user_id != OWNER_ID:
+     
                 try:
                     user = await app.get_users(user_id)
                     user_mention = user.mention if user else f"🎁 Sᴜᴅᴏ {count} ɪᴅ: {user_id}"
