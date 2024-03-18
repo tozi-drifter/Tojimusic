@@ -59,14 +59,28 @@ async def sudoers_list(client, message: Message):
 async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
     if callback_query.from_user.id not in SUDOERS:
-        return await callback_query.edit_message_media(
-        media=InputMediaVideo("https://graph.org/file/63ed2abdcb1ac23f699ea.mp4", has_spoiler=True),
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [close_button]
-            ]
-        ),
-        )
-close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
-     
-                
+        return await callback_query.answer("Sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪɴᴇ Sᴏʟᴅɪᴇʀ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀ Cᴏᴍᴍᴀɴᴅᴇʀ", show_alert=True)
+    else:
+        user = await app.get_users(OWNER_ID)
+
+        user_mention = (user.first_name if not user.mention else user.mention)
+        caption = f"˹ʟɪsᴛ ᴏғ ʙᴏᴛ ᴍᴏᴅᴇʀᴀᴛᴏʀs˼\n\n🗿Oᴡɴᴇʀ ➥ {user_mention}\n\n"
+
+        keyboard.append([InlineKeyboardButton("๏ ᴠɪᴇᴡ ᴏᴡɴᴇʀ ๏", url=f"tg://openmessage?user_id={OWNER_ID}")])
+        
+        count = 1
+        for user_id in SUDOERS:
+            if user_id != OWNER_ID:
+                try:
+                    user = await app.get_users(user_id)
+                    user_mention = user.mention if user else f"🎁 Sᴜᴅᴏ {count} ɪᴅ: {user_id}"
+                    caption += f"🎁 Sᴜᴅᴏ » {count}: {user_mention}\n"
+                    button_text = f"๏ ᴠɪᴇᴡ sᴜᴅᴏ {count} ๏ "
+                    keyboard.append([InlineKeyboardButton(button_text, url=f"tg://openmessage?user_id={user_id}")])
+                    count += 1
+                except:
+                    continue
+
+        if keyboard:
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await callback_query.message.edit_caption(caption=caption, reply_markup=reply_markup)
