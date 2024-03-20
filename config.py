@@ -12,9 +12,9 @@ API_HASH = getenv("API_HASH")
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 # Add Owner Username without @ 
-OWNER_USERNAME = getenv("OWNER_USERNAME", "ix_updates")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "DRIFTERSNETWORK")
 # Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "GarouProXbot")
+BOT_USERNAME = getenv("BOT_USERNAME", "Drifters_managment_bot")
 # Don't Add style font 
 BOT_NAME = getenv("BOT_NAME", "ʏᴜᴍᴇᴋᴏ MUSIC")
 #get Your Assistant User name
@@ -51,8 +51,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/driftersnetwork")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/drifter_supports")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/DRIFTERSNETWORK")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/DRIFTERS_SUPPORT")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
